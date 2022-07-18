@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ACA0F6328856B4100818974 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA0F6228856B4100818974 /* DetailViewController.swift */; };
 		4AFE55C0288448A3002D1E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55BF288448A3002D1E3B /* AppDelegate.swift */; };
 		4AFE55C2288448A3002D1E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55C1288448A3002D1E3B /* SceneDelegate.swift */; };
-		4AFE55C4288448A3002D1E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55C3288448A3002D1E3B /* ViewController.swift */; };
 		4AFE55C7288448A3002D1E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE55C5288448A3002D1E3B /* Main.storyboard */; };
 		4AFE55C9288448A4002D1E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE55C8288448A4002D1E3B /* Assets.xcassets */; };
 		4AFE55CC288448A4002D1E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE55CA288448A4002D1E3B /* LaunchScreen.storyboard */; };
+		4AFE55D728844976002D1E3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55D628844976002D1E3B /* MainViewController.swift */; };
+		4AFE55DA28844A1A002D1E3B /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55D928844A1A002D1E3B /* People.swift */; };
+		4AFE55DD28844F79002D1E3B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55DC28844F79002D1E3B /* Network.swift */; };
+		4AFE55E4288458EE002D1E3B /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE55E3288458EE002D1E3B /* PeopleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ACA0F6228856B4100818974 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AFE55BC288448A3002D1E3B /* StarWarsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE55BF288448A3002D1E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AFE55C1288448A3002D1E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AFE55C3288448A3002D1E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AFE55C6288448A3002D1E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AFE55C8288448A4002D1E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AFE55CB288448A4002D1E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AFE55CD288448A4002D1E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AFE55D628844976002D1E3B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4AFE55D928844A1A002D1E3B /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		4AFE55DC28844F79002D1E3B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4AFE55E3288458EE002D1E3B /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ACA0F5F28855D7400818974 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA0F6228856B4100818974 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4ACA0F6028855D9600818974 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA0F6128855DDF00818974 /* Cell */,
+				4AFE55D628844976002D1E3B /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4ACA0F6128855DDF00818974 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AFE55E3288458EE002D1E3B /* PeopleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4AFE55B3288448A3002D1E3B = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +89,50 @@
 		4AFE55BE288448A3002D1E3B /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AFE55D528844901002D1E3B /* Controller */,
+				4AFE55D4288448F4002D1E3B /* View */,
+				4AFE55D3288448EB002D1E3B /* Model */,
 				4AFE55BF288448A3002D1E3B /* AppDelegate.swift */,
 				4AFE55C1288448A3002D1E3B /* SceneDelegate.swift */,
-				4AFE55C3288448A3002D1E3B /* ViewController.swift */,
-				4AFE55C5288448A3002D1E3B /* Main.storyboard */,
 				4AFE55C8288448A4002D1E3B /* Assets.xcassets */,
-				4AFE55CA288448A4002D1E3B /* LaunchScreen.storyboard */,
 				4AFE55CD288448A4002D1E3B /* Info.plist */,
 			);
 			path = StarWarsApp;
+			sourceTree = "<group>";
+		};
+		4AFE55D3288448EB002D1E3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AFE55DB28844D4A002D1E3B /* api */,
+				4AFE55D928844A1A002D1E3B /* People.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFE55D4288448F4002D1E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AFE55CA288448A4002D1E3B /* LaunchScreen.storyboard */,
+				4AFE55C5288448A3002D1E3B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AFE55D528844901002D1E3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA0F6028855D9600818974 /* Main */,
+				4ACA0F5F28855D7400818974 /* Detail */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4AFE55DB28844D4A002D1E3B /* api */ = {
+			isa = PBXGroup;
+			children = (
+				4AFE55DC28844F79002D1E3B /* Network.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AFE55C4288448A3002D1E3B /* ViewController.swift in Sources */,
+				4AFE55DD28844F79002D1E3B /* Network.swift in Sources */,
+				4AFE55DA28844A1A002D1E3B /* People.swift in Sources */,
+				4AFE55E4288458EE002D1E3B /* PeopleCell.swift in Sources */,
 				4AFE55C0288448A3002D1E3B /* AppDelegate.swift in Sources */,
 				4AFE55C2288448A3002D1E3B /* SceneDelegate.swift in Sources */,
+				4AFE55D728844976002D1E3B /* MainViewController.swift in Sources */,
+				4ACA0F6328856B4100818974 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
