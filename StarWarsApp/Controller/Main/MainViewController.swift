@@ -9,25 +9,39 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var mainCV: UICollectionView!
+    @IBOutlet weak var segmented: UISegmentedControl!
     
     let peopleRequst = PeopleRequest()
     var peoples = [People]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         peopleRequst.fetchPeople { data in self.peoples = data
         DispatchQueue.main.async { self.mainCV.reloadData()}}
         
         self.mainCV.dataSource = self
         self.mainCV.delegate = self
+        
     }
+    
+    @IBAction func segmentedAction(_ sender: Any) {
+        switch segmented.selectedSegmentIndex {
+        case 0: loadData()
+        case 1: sortedByWeight()
+            reloadCollectionView()
+        case 2: sortedByHeight()
+            reloadCollectionView()
+        default:
+            break
+        }
+    }
+    
 }
 
 
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return peoples.count
+        peoples.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,7 +61,16 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                  
         }
     }
+    // MARK: сортировки
+    private func sortedByHeight() {peoples.sort { $0.height > $1.height}}
+    private func sortedByWeight() {peoples.sort { $0.weight > $1.weight}}
+    private func reloadCollectionView() {mainCV.reloadSections(IndexSet(integer: 0))}
     
+    //MARK: Загрузка данных
+    private func loadData() {
+        peopleRequst.fetchPeople { data in self.peoples = data
+        DispatchQueue.main.async { self.mainCV.reloadData()}}
+    }
     
     }
     
