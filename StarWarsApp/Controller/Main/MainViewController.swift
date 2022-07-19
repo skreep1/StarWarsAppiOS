@@ -10,13 +10,13 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var mainCV: UICollectionView!
     
-    let network = Network()
+    let peopleRequst = PeopleRequest()
     var peoples = [People]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        network.fetchPeople { data in self.peoples = data
+        peopleRequst.fetchPeople { data in self.peoples = data
         DispatchQueue.main.async { self.mainCV.reloadData()}}
         
         self.mainCV.dataSource = self

@@ -14,21 +14,28 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var hairLabel: UILabel!
+    @IBOutlet weak var skinLabel: UILabel!
+    @IBOutlet weak var eyeLabel: UILabel!
+    
     
     var people: People?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel()
+        setupText()
     
     }
     
-    private func setupLabel() {
+    private func setupText() {
         self.heightLabel.text = people?.height
         self.nameLabel.text = people?.name
         self.weightLabel.text = people?.weight
         self.genderLabel.text = people?.gender
         self.birthdayLabel.text = people?.birth
+        self.hairLabel.text = people?.hair
+        self.skinLabel.text = people?.skin
+        self.eyeLabel.text = people?.eye
     }
     
 

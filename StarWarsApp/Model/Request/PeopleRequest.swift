@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Network {
+class PeopleRequest {
     
     private let peopleUrl = "https://swapi.dev/api/people/"
     
@@ -18,7 +18,8 @@ class Network {
                 if error != nil { print("error")
                     return
                 }
-    do {
+                
+                do {
                 let result =  try JSONDecoder().decode(AllPeople.self, from: data!)
                     comp(result.allPeople)
                 } catch {
